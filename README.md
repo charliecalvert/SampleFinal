@@ -26,3 +26,15 @@ to the node server.
 
 NOTE: The names of your project will likely be different. For instance
 they might be called MapServer and MapClient.
+
+The ApacheSite
+==============
+
+How to use the ApacheSite:
+
+- Check to make sure Apache2 is installed
+- Clone this Repository on your EC2 machine
+- Navigate to the CopyWebSite directory
+- Type: *sudo ./RunDeploy.sh*
+
+
