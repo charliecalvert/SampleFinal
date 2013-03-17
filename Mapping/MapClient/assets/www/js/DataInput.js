@@ -26,7 +26,7 @@ var DataInput = (function() {
 			data : data,
 			success : function(json) {
 				var result = "<p>Result: " + json.result + "</p>";
-				var value = "<p>Value: " + json.value + "</p>";
+				var value = "<p>Value: " + json.newNumberValue + "</p>";
 				$("#resultDiv").html(result + value);
 			},
 			error : showError
