@@ -43,7 +43,7 @@ app.post('/addToFive', function(request, response) {
 	var input = parseInt(request.body.value);
 	var newNumber = input + 5;
 	var jsonResult = { result : "Success", inputValue: input, newNumberValue: newNumber }
-	writeToFile(JSON.stringify(jsonResult, null, 4))
+	writeToFile(numbersFileName, JSON.stringify(jsonResult, null, 4))
 	response.send( jsonResult );
 });
 
