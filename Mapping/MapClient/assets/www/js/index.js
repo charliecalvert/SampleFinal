@@ -3,6 +3,8 @@
 
 App.Main = (function() {'use strict';
 
+	var util = new App.Utility();
+	
     // Application Constructor
     function Main() {        
         console.log("debug: App constructor called");
@@ -16,15 +18,20 @@ App.Main = (function() {'use strict';
     var bindEvents = function() {
         console.log("debug: App bindEvents called");
         document.addEventListener('deviceready', onDeviceReady, false);
+        showMap();
     };
 
     // Called when device is fully initialized   
     var onDeviceReady = function() {
         console.log("debug: App onDeviceReady called");        
         showProgramState();                
-        showDate();
+        showDate();        
     };
 
+	var showMap = function() {
+		util.showMap(47.6062095, -122.3320708);
+	}
+	
     var showProgramState = function() {
         var listeningElement = $('.listening');
         var receivedElement = $('.received');
@@ -33,8 +40,7 @@ App.Main = (function() {'use strict';
     };
     
     var showDate = function() {
-        console.log('debug: showDate called');
-        var util = new App.Utility();
+        console.log('debug: showDate called');        
         $("#curDate").html("Current Date: " + util.getToday());
     };
 

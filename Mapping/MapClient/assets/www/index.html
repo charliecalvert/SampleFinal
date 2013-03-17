@@ -6,9 +6,10 @@
 		<meta name="format-detection" content="telephone=no" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.2.0.css" />
-		<title>jQuery Basic</title>
+		<title>jQuery Basic</title>		
 		<script src="cordova-2.3.0.js"></script>
 		<script src="jquery.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 		<script src="jquery.mobile-1.2.0.js"></script>
 		<script src="js/utility.js"></script>
 		<script src="js/index.js"></script>
@@ -16,7 +17,21 @@
 	</head>
 	<body>
 
-		<div data-role="page" id="page1" data-theme="b">
+	<div data-role="page" id="page1" data-theme="b">
+
+			<div data-role="header"><h1>Page Two</h1></div><!-- /header -->
+
+			<div id="mainDiv" data-role="content">
+				<div id="mapCanvas"> </div>
+				<div id="page1Buttons" > 
+					<a href="#page2" data-role="button" data-icon="star">Go to Page Two</a>
+					<a href="#page3" data-role="button" data-icon="star">Go to Page Three</a>
+				</div>
+			</div><!-- /content -->
+
+		</div><!-- /page -->
+
+		<div data-role="page" id="page2" data-theme="b">
 
 			<div data-role="header"><h1>Page One</h1></div>
 
@@ -33,11 +48,11 @@
 
 						<button id="buttonAddNine">Add Nine</button>
 						<button id="buttonAddFive">Add Five</button>
-
+						<a href="#page1" data-role="button" data-icon="star">Go to Page One</a>
 						<div id='resultDiv'> </div>
 
 						<ul id='debugList'> </ul>
-						<a href="#page2" data-role="button" data-icon="star">Go to Page Two</a>
+
 					</div>
 				</div>
 
@@ -49,7 +64,7 @@
 
 		<!-- /page -->
 
-		<div data-role="page" id="page2" data-theme="b">
+		<div data-role="page" id="page3" data-theme="b">
 
 			<div data-role="header"><h1>Page Two</h1></div><!-- /header -->
 
@@ -58,16 +73,13 @@
 					US Presidents
 				</p>
 				<ul data-role="listview" data-inset="true" data-filter="true">
-					<li><a href="#">George Washingon</a></li>
-					<li><a href="#">John Adams</a></li>
-					<li><a href="#">Thomas Jefferson</a></li>
-					<li><a href="#">James Madison</a></li>
-					<li><a href="#">James Monroe</a></li>
+					<li>Coming soon</li>
 				</ul>
 				<a href="#page1" data-role="button" data-icon="star">Back to Page One</a>
 			</div><!-- /content -->
 
 		</div><!-- /page -->
-		
+
+				
 	</body>
 </html>

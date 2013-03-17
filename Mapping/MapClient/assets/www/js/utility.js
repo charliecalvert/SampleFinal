@@ -8,6 +8,8 @@ var App = {};
 
 App.Utility = (function() {'use strict';
 
+	var googleMap = null;
+	
     function Utility() {}
     
     Utility.prototype.zeroFill = function(number, width) {
@@ -33,5 +35,26 @@ App.Utility = (function() {'use strict';
         return month + '/' + day + '/' + year;
     };
     
+    var makeMarker = function(initPosition, initTitleString) {
+		var marker = new google.maps.Marker({
+			map : googleMap,
+			position : initPosition,
+			title : initTitleString
+		});
+	}
+	
+    Utility.prototype.showMap = function(latitude, longitude) {
+		// geocoder = new google.maps.Geocoder();
+		var startPosition = new google.maps.LatLng(latitude, longitude);
+		var mapOptions = {
+			zoom : 8,
+			center : startPosition,
+			mapTypeId : google.maps.MapTypeId.ROADMAP
+		};
+		var mapCanvas = $('#mapCanvas');
+		googleMap = new google.maps.Map(mapCanvas[0], mapOptions);
+		makeMarker(startPosition, "init at Seattle");
+	}
+	
     return Utility;    
 })();
