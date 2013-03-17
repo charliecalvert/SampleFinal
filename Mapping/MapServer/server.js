@@ -6,7 +6,7 @@ var port = process.env.PORT || 30025;
 
 // We need this here to make POST call work
 app.use(express.bodyParser());
-var presidentsFileName = 'data/AddNumbers.json';
+var numbersFileName = 'data/AddNumbers.json';
 
 
 app.get('/', function(req, res) {
@@ -18,7 +18,7 @@ app.get('/', function(req, res) {
 
 app.get('/getData', function(request, response) {
 	console.log("Get Presidents called");
-	var json = fs.readFileSync(presidentsFileName);
+	var json = fs.readFileSync(numbersFileName);
 	response.send(json);
 });
 
@@ -43,6 +43,7 @@ app.post('/addToFive', function(request, response) {
 	var input = parseInt(request.body.value);
 	var newNumber = input + 5;
 	var jsonResult = { result : "Success", inputValue: input, newNumberValue: newNumber }
+	writeToFile(JSON.stringify(jsonResult, null, 4))
 	response.send( jsonResult );
 });
 
