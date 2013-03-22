@@ -3,6 +3,12 @@ Sample Final
 
 This the main branch. It works with City Location Data.
 
+If you are interested in the Simplified Final, please see
+the README.md file in the Mapping/MapServer directory.
+
+Overview
+--------
+
 I recommend that you use this project as a sample structure for your final. 
 In particular: 
 
