@@ -6,7 +6,7 @@ var port = process.env.PORT || 30025;
 
 // We need this here to make POST call work
 app.use(express.bodyParser());
-var numbersFileName = 'data/AddNumbers.json';
+var citiesFileName = 'data/MapData.json';
 
 
 app.get('/', function(req, res) {
@@ -16,9 +16,9 @@ app.get('/', function(req, res) {
 });
 
 
-app.get('/getData', function(request, response) {
-	console.log("Get Presidents called");
-	var json = fs.readFileSync(numbersFileName);
+app.get('/getCities', function(request, response) {
+	console.log("Get Cities called");
+	var json = fs.readFileSync(citiesFileName);
 	response.send(json);
 });
 
@@ -35,15 +35,15 @@ function writeToFile(fileName, json) {
 	});
 }
 
-app.post('/addToFive', function(request, response) {
-	console.log("AddToFive called");
+app.post('/saveCities', function(request, response) {
+	console.log("saveCities called");
 	console.log("request.body: " + JSON.stringify(request.body));	
-	console.log("request.body.value: " + request.body.value);
+	var details = request.body.details;
+	console.log("Details: " + details);
 	
-	var input = parseInt(request.body.value);
-	var newNumber = input + 5;
-	var jsonResult = { result : "Success", inputValue: input, newNumberValue: newNumber }
-	writeToFile(numbersFileName, JSON.stringify(jsonResult, null, 4))
+	var obj = JSON.parse(request.body.data);
+	writeToFile(citiesFileName, JSON.stringify(obj, null, 4));
+	var jsonResult = { result : "Success" };
 	response.send( jsonResult );
 });
 

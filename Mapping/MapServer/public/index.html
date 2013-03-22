@@ -1,24 +1,66 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<meta name="generator" content="pandoc">
-		<title>Data Input 01</title>
-		<script src="/public/jquery-1.8.3.min.js"></script>
-		<script src="/public/handlebars.js"></script>
-		<script src="/public/index.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="public/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="public/css/jquery.mobile-1.2.0.css" />
+		<title>jQuery Basic</title>		
+		<script src="public/jquery.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+		<script src="public/jquery.mobile-1.2.0.js"></script>
+		<script src="public/js/Elf.js"></script>
+		<script src="public/js/EasyCity.js"></script>
+		<script src="public/js/Directions.js"></script>
+		<script src="public/js/GeoCode.js"></script>
+		<script src="public/js/utility.js"></script>
+		<script src="public/js/DataInput.js"></script>
+		<script src="public/js/index.js"></script>
 	</head>
 	<body>
-		<h1 id="read-json-code">Round Trip to the Server</h1>
-		<p>Enter a number and the server will add 9 or 5 to it:</p>
-		<input type="text" id="userNumber" value="3" />
-		
-		<button id="buttonAddNine">Add Nine</button>
-		<button id="buttonAddFive">Add Five</button>
+	<div data-role="page" id="page1" data-theme="b">
+			<div data-role="header"><h1>Map View</h1></div><!-- /header -->
+			<div id="mainDiv" data-role="content">
+				<div id="page1Buttons" > 
+					<a href="#page2" data-role="button" data-inline="true" data-icon="star">Pick Route</a>
+					<a href="#page3" data-role="button" data-inline="true" data-icon="star">See Directions</a>
+				</div>
+				<div id="mapCanvas"> </div>
+			</div>
+		</div><!-- /page -->
+		<div data-role="page" id="page2" data-theme="b">
+			<div data-role="header"><h1>Pick Route</h1></div>
 
+			<div data-role="content">
+				<div class="app">
+					<p>Mapper</p>
+					<div id="deviceready" class="blinkNot">
+						<p class="event listening">Connecting to Device</p>
+						<p class="event received">Device is Ready</p>
+						<select id="cityList"> </select>
+						<input type="text" id="cityName" value="3" />
+						<input type="text" id="description" value="3" />
+						<input type="text" id="latitude" value="3" />
+						<input type="text" id="longitude" value="3" />
+		
+						<button id="getCities">GetCities</button>
+						<button id="insertCities">Insert New City</button>
+						<button id="saveCities">Save Cities</button>
+						<a href="#page1" data-role="button" data-icon="star">View Map</a>
 		<div id='resultDiv'> </div>
 		
 		<ul id='debugList'> </ul>
 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-role="page" id="page3" data-theme="b">
+			<div data-role="header"><h1>Directions</h1></div><!-- /header -->
+			<div data-role="content">
+				<a href="#page1" data-role="button" data-icon="star">Back to Page One</a>
+				<div id="directions"> </div>				
+			</div><!-- /content -->
+		</div><!-- /page -->
 	</body>
 </html>

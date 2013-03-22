@@ -1,0 +1,32 @@
+[
+    {
+        "CityName": "Washington DC",
+        "Description": "US Capital",
+        "Latitude": 35,
+        "Longitude": 90
+    },
+    {
+        "CityName": "Bellevue WA",
+        "Description": "Where I live.",
+        "Latitude": 49,
+        "Longitude": 122
+    },
+    {
+        "CityName": "San Francisco CA",
+        "Description": "The Golden Gate City.",
+        "Latitude": 47,
+        "Longitude": 122
+    },
+    {
+        "CityName": "New Orleans, LA",
+        "Description": "Jazz",
+        "Latitude": "35",
+        "Longitude": "90"
+    },
+    {
+        "CityName": "Portland, OR",
+        "Description": "Oregon City",
+        "Latitude": "49",
+        "Longitude": "122"
+    }
+]
