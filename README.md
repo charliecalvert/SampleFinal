@@ -1,6 +1,8 @@
 Sample Final
 ============
 
+This is the original Numbers Branch which work with numbers.
+
 I recommend that you use this project as a sample structure for your final. 
 In particular: 
 
