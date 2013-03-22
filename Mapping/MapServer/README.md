@@ -1,7 +1,7 @@
 Sample Final Server
 ===================
 
-A number of people are having trouble with the final. To help
+A number of people are having trouble with the P272 final. To help
 you complete the course, I have created this simplified version
 of the final. Please complete the assignment described below.
 When you have the MapServer working, commit your code to the 
