@@ -8,14 +8,40 @@ When you have the MapServer working, commit your code to the
 repository and start your server on your instance of EC2. Submit
 the URL of your server, and I will test it.
 
-You can start this new version of the sample server by navigating
-to the MapServer folder and typing the following on Windows:
+Basics
+------
+
+If you are reading this on GitHub, and don't understand up to 
+get a version of this code on your machine, do one of the following.
+If you have never downloaded the sample final:
+
+	git clone git://github.com/charliecalvert/SampleFinal.git
+
+If you already have a copy of the sample final, and wish you had
+the updated version: 
+
+* Navigate to your local version of the repository and type:
+* git pull
+
+You can start this new version of the sample server on your home
+machine by navigating to the MapServer folder and typing the 
+following on Windows:
 
 	node server.js
+
+Then go to your browser and type: localhost:30025
 	
-On EC2 (Linux), you would type the following:
+You can also run this server on EC2 (Linux), you would type the following:
 
 	nodejs server.js
+
+Then go to your browser and type the following:
+
+	<ElasticIP>:30025
+	
+For instance:
+
+	54.111.11.11:30025
 	
 The Simplified Final
 --------------------
