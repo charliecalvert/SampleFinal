@@ -1,6 +1,8 @@
 Sample Final
 ============
 
+This the main branch. It works with City Location Data.
+
 I recommend that you use this project as a sample structure for your final. 
 In particular: 
 
