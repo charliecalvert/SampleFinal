@@ -65,6 +65,12 @@ the method
 * In DataInput, the *saveCities* method is incomplete. Complete
 the method. 
 
+Other programs, in particular PresidentsJSON and DataInputCordova01 
+contain examples of the methods I want you to implement or complete in 
+the sample final. In other words, you should be able to find parallel 
+examples in the programs I gave you earlier, and see how they should be 
+tweaked (or not) to work in the final. 
+
 Grading
 -------
 
